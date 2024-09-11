@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>AnweshikaScholarshipExam</title>
+  
+
+    <!-- Include via CDN -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+ 
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/cScript.js"></script>
+ 
+ <style>
+        .form-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .form-group label {
+            margin-right: 10px;
+            width: 150px; /* Adjust the width as needed */
+        }
+        .form-group input {
+            flex: 1;
+        }
+		
+		.green-button {
+            background-color: green;
+            color: white; /* Optional: to make the text color white */
+            border: none; /* Optional: to remove the border */
+            padding: 10px 20px; /* Optional: to add some padding */
+            cursor: pointer; /* Optional: to change the cursor on hover */
+        }
+		
+		.red-button {
+            background-color: red;
+            color: white; /* Optional: to make the text color white */
+            border: none; /* Optional: to remove the border */
+            padding: 10px 20px; /* Optional: to add some padding */
+            cursor: pointer; /* Optional: to change the cursor on hover */
+        }
+		
+		.error {
+            color: red;
+            display: none;
+        }
+		
+    </style>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!-- progress barstle -->
+  <!-- <link rel="stylesheet" href="css/css-circular-prog-bar.css"> -->
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- font wesome stylesheet -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- <link rel="stylesheet" href="css/css-circular-prog-bar.css"> -->
+
+  
+</head>
+
+<body>
+  <div class="top_container">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="">
+            <span>
+              AnweshikaScholarshipExam
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
+                </li>
+              
+              </ul>
+              <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
+                <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+        </nav>
+      </div>
+    </header>
+    <section class="hero_section ">
+      <div class="hero-container container">
+        <div class="hero_detail-box">
+          <h1>
+            Welcome to <br>
+            Anweshika Scholarship Exam Portal
+          </h1>
+          <h3>
+             An initiative by Netaji Sadharan Pathagar.
+          </h3>
+          <p>
+            The aim of education is the knowledge, not of facts, but of values.
+          </p>
+		  
+		  
+          <div class="hero_btn-continer"> 
+			  <form id="resultForm">
+					<div class="form-group">
+						<label for="inputValue">Enter Your Full Name :</label>
+						<input type="text" id="inputValueName" name="inputValueName">
+					 </div>
+					 <!-- <div class="form-group">
+						<label for="inputValue">Enter Your Date of Birth :</label>
+						<input type="date" id="inputValueDob" name="inputValueDob" required>
+					</div> -->
+					<!--  <div class="form-group">
+						<label for="mobile">Enter Your Registered Mobile Number :</label>
+						<input type="tel" id="inputValueCellNo" name="inputValueCellNo" pattern="[0-9]{10}" required>
+						<span class="error" id="error">Please enter a valid 10-digit mobile number.</span>
+					</div> -->
+					 
+					<div class="form-group">
+						<label for="inputValue">Enter Your Roll Number:</label>
+						<input type="text" id="inputValue" name="inputValue">
+					</div>
+					
+					<button class="green-button" type="button" onclick="showResult()">Show Result</button>
+					<button class="red-button" type="button" id="resetButton" >Clear</button>
+			</form>
+			<p style="background-color: lightgreen; color: black; font-weight: bold;" id="resultDisplay"></p>
+			  
+            <!-- </a> --> 
+          </div>
+		  
+        </div>
+        <div class="hero_img-container">
+          <div>
+            <img src="images/hero.png" alt="" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- end header section -->
+
+  <!-- about section -->
+  <section class="about_section layout_padding">
+    <div class="container">
+      <h2 class="main-heading ">
+        About School
+      </h2>
+      <p class="text-center">
+        Education is the key to unlocking the world, a passport to freedom.
+      </p>
+      <div class="about_img-box ">
+        <img src="images/kids.jpg" alt="" class="img-fluid w-100">
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+       <!--  <a href="" class="call_to-btn  ">
+
+          <span>
+            Read More
+          </span>
+          <img src="images/right-arrow.png" alt="">
+        </a> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="contact_section layout_padding-bottom">
+    <div class="container">
+
+      <h2 class="main-heading">
+        Address
+
+      </h2>
+       <p class="text-center">Netaji Sadharan Pathagar 
+				Vill & Post-Balaichak , Dist-Hooghly,Sub Div.- Arambagh , P.S-Khanakul , India , West Bengal-712416</p>		  
+			  
+      
+
+    </div>
+  </section>
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+     Maintained & Designed by @Ankush</a>
+    </p>
+  </section>
+ 	
+ <script>
+			
+		document.getElementById('resetButton').addEventListener('click', function() {
+            //var mobileInput = document.getElementById('mobile');
+            //mobileInput.value = ''; // Clear the input field
+			
+			var nameInput1 = document.getElementById('inputValueName');			
+            var rollNumInput1 = document.getElementById('inputValue');
+			//var mobileInput1 = document.getElementById('inputValueCellNo');
+			//var dobInput1 = document.getElementById('inputValueDob');
+			nameInput1.value ='';
+			rollNumInput1.value ='';
+			//mobileInput1.value ='';
+			//dobInput1.value ='' 
+			//error.style.display = 'none';
+			document.getElementById('resultDisplay').innerText = '';
+        });
+		
+</script> 
+
+</body>
+
+</html>
