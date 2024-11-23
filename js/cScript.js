@@ -18,7 +18,7 @@
 
 
  
- showResult()
+
  function showResult() {
 			
 			var error = document.getElementById('error');
