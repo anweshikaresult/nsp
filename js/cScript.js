@@ -165,9 +165,8 @@ function strToJson(encodedString,inputName,inputRollNum){
 			Remarks: 'NA'
 		};
 	});
-
 			
-	console.log (transformedArray);
+	//console.log (transformedArray);
 	 
 	//const student = transformedArray.find(item => item.Name === resultName);
 	const student = transformedArray.find(item => item.RollNumber === resultRoll);
@@ -205,7 +204,6 @@ function strToJson(encodedString,inputName,inputRollNum){
 		}
    
 };
-
 		
 
 function csvToJson(csv) {
