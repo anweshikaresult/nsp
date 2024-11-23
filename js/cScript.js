@@ -185,7 +185,7 @@ function strToJson(encodedString,inputName,inputRollNum){
 			 resultMarks = student.Marks ;
 			 console.log(student.Marks );
 		
-			if ( resultMarks != 'AB' || resultMarks != 'ab' )
+			if ( resultMarks != 'AB' && resultMarks != 'ab' )
 			{
 			 document.getElementById('resultDisplay').textContent =  'Dear '+ inputName + ', you have scored '+resultMarks+' out of 100 marks.' ;
 			 //document.getElementById('resultDisplay').textContent =  'Dear '+ inputName + ', you have scored '+resultMarks+' marks.' ;
