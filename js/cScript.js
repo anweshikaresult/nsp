@@ -178,7 +178,7 @@ function strToJson(encodedString,inputName,inputRollNum){
 			document.getElementById('resultDisplay').innerText = 'Please enter your name exactly as it appears on your admit card !'
 			document.getElementById('resultDisplay').style.backgroundColor = 'red';
 		}
-		else if (student.RollNumber == resultRoll)
+		else if ((student.RollNumber == resultRoll) && (student.Name == resultName))
 		{		 
 			 console.log(student);
 			 console.log(student.RollNumber); 
