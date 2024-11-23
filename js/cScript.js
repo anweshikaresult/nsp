@@ -169,7 +169,8 @@ function strToJson(encodedString,inputName,inputRollNum){
 			
 	console.log (transformedArray);
 	 
-	const student = transformedArray.find(item => item.Name === resultName);
+	//const student = transformedArray.find(item => item.Name === resultName);
+	const student = transformedArray.find(item => item.RollNumber === resultRoll);
 	 
 	 //let value;
 		if (student === null || typeof student === 'undefined') {
@@ -184,10 +185,18 @@ function strToJson(encodedString,inputName,inputRollNum){
 			 resultMarks = student.Marks ;
 			 console.log(student.Marks );
 		
+			if ( resultMarks.toUpperCase() != 'AB' )
+			{
 			 //document.getElementById('resultDisplay').textContent =  'Dear '+ inputName + ', you have scored '+resultMarks+' out of 200 marks.' ;
 			 document.getElementById('resultDisplay').textContent =  'Dear '+ inputName + ', you have scored '+resultMarks+' marks.' ;
 			 document.getElementById('resultDisplay').style.backgroundColor = 'green';
 			 //document.getElementById('resultDisplay').textContent = jsonArray.stringify(json, null, 2);
+			}
+			else
+			{
+				document.getElementById('resultDisplay').innerText ='Dear '+ inputName + ', you were absent on that day !'
+				document.getElementById('resultDisplay').style.backgroundColor = 'red';
+			}
 		}
 		else 
 		{
