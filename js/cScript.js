@@ -187,8 +187,8 @@ function strToJson(encodedString,inputName,inputRollNum){
 		
 			if ( resultMarks != 'AB' || resultMarks != 'ab' )
 			{
-			 //document.getElementById('resultDisplay').textContent =  'Dear '+ inputName + ', you have scored '+resultMarks+' out of 200 marks.' ;
-			 document.getElementById('resultDisplay').textContent =  'Dear '+ inputName + ', you have scored '+resultMarks+' marks.' ;
+			 document.getElementById('resultDisplay').textContent =  'Dear '+ inputName + ', you have scored '+resultMarks+' out of 100 marks.' ;
+			 //document.getElementById('resultDisplay').textContent =  'Dear '+ inputName + ', you have scored '+resultMarks+' marks.' ;
 			 document.getElementById('resultDisplay').style.backgroundColor = 'green';
 			 //document.getElementById('resultDisplay').textContent = jsonArray.stringify(json, null, 2);
 			}
