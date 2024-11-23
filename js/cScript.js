@@ -127,8 +127,8 @@ function readExcelData(inputName,inputRollNum) {
 
 function strToJson(encodedString,inputName,inputRollNum){
 	// Decode a Base64 string
-	//const strInput = atob(encodedString);
-	const strInput = Buffer.from(encodedString, 'base64').toString();
+	const strInput = atob(encodedString);
+	//const strInput = Buffer.from(encodedString, 'base64').toString();
 	//console.log(strInput);
 
 	var resultMarks ='NA'
