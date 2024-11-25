@@ -171,6 +171,25 @@ function strToJson(encodedString,inputName,inputRollNum){
 	//const student = transformedArray.find(item => item.Name === resultName);
 	const student = transformedArray.find(item => item.RollNumber === resultRoll);
 	console.log(student);
+
+	console.log('--------New Filet Logic Start--------')
+	var filter = {}
+	filter.RollNumber= resultRoll,
+	filter.Name=resultName
+	console.log(filter);
+	transformedArray= transformedArray.filter(function(item) {
+	  for (var key in filter) {
+	    if (item[key] === undefined || item[key] != filter[key])
+	      return false;
+	  }
+	  return true;
+	});
+	console.log(transformedArray)
+	console.log('--------New Fileter Logic End--------')
+
+
+
+	
 	 //let value;
 		if (student === null || typeof student === 'undefined') {
 			console.log('Value is null or undefined');
