@@ -177,14 +177,14 @@ function strToJson(encodedString,inputName,inputRollNum){
 	filter.RollNumber= resultRoll,
 	filter.Name=resultName
 	console.log(filter);
-	transformedArray= transformedArray.filter(function(item) {
+	const arrCandidate= transformedArray.filter(function(item) {
 	  for (var key in filter) {
 	    if (item[key] === undefined || item[key] != filter[key])
 	      return false;
 	  }
 	  return true;
 	});
-	console.log(transformedArray)
+	console.log(arrCandidate)
 	console.log('--------New Fileter Logic End--------')
 
 
