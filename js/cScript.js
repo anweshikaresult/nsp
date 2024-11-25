@@ -166,18 +166,18 @@ function strToJson(encodedString,inputName,inputRollNum){
 		};
 	});
 			
-	console.log (transformedArray);
+	//console.log (transformedArray);
 	 
 	//const student = transformedArray.find(item => item.Name === resultName);
 	const student = transformedArray.find(item => item.RollNumber === resultRoll);
-	console.log(student);
+	//console.log(student);
 
-	console.log('--------New Filet Logic Start--------')
+	//console.log('--------New Filet Logic Start--------')
 	var filter = {}
 	filter.RollNumber= resultRoll,
 	filter.Name=resultName
-	console.log(filter);
-	const arrCandidate = transformedArray.filter(function(item) {
+	//console.log(filter);
+	var arrCandidate = transformedArray.filter(function(item) {
 	  for (var key in filter) {
 	    if (item[key] === undefined || item[key] != filter[key])
 	      return false;
@@ -185,10 +185,10 @@ function strToJson(encodedString,inputName,inputRollNum){
 	  return true;
 	});
 	console.log(arrCandidate)
-	console.log(arrCandidate[0].Name)
-	console.log(arrCandidate[0].RollNumber)
-	console.log(arrCandidate[0].Marks)
-	console.log('--------New Fileter Logic End--------')
+	//console.log(arrCandidate[0].Name)
+	//console.log(arrCandidate[0].RollNumber)
+	//console.log(arrCandidate[0].Marks)
+	//console.log('--------New Fileter Logic End--------')
 	
 	
 	 //let value;
@@ -202,10 +202,12 @@ function strToJson(encodedString,inputName,inputRollNum){
 		//else if ((student.RollNumber == resultRoll) && (student.Name == resultName))
 		else if (arrCandidate.length > 0)
 		{		 
-			 console.log(student);
-			 console.log(student.RollNumber); 
-			 resultMarks = student.Marks ;
-			 console.log(student.Marks );
+			 //console.log(student);
+			 //console.log(student.RollNumber); 
+			 //resultMarks = student.Marks ;
+			 //console.log(student.Marks );
+			 
+			resultMarks = arrCandidate[0].Marks
 		
 			if ( resultMarks != 'AB' )
 			{
