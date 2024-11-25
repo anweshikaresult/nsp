@@ -170,7 +170,7 @@ function strToJson(encodedString,inputName,inputRollNum){
 	 
 	//const student = transformedArray.find(item => item.Name === resultName);
 	const student = transformedArray.find(item => item.RollNumber === resultRoll);
-	 
+	console.log(student);
 	 //let value;
 		if (student === null || typeof student === 'undefined') {
 			console.log('Value is null or undefined');
