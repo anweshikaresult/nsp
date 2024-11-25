@@ -127,8 +127,7 @@ function readExcelData(inputName,inputRollNum) {
 				 //document.getElementById('resultDisplay').textContent = jsonArray.stringify(json, null, 2);
 			}
     })
-    .catch(error => console.error('Error fetching the CSV file:', error));
-	
+    .catch(error => console.error('Error fetching the CSV file:', error));	
 	
 	//return resultMarks;
 	
@@ -188,8 +187,7 @@ function strToJson(encodedString,inputName,inputRollNum){
 	//console.log(arrCandidate[0].Name)
 	//console.log(arrCandidate[0].RollNumber)
 	//console.log(arrCandidate[0].Marks)
-	//console.log('--------New Fileter Logic End--------')
-	
+	//console.log('--------New Fileter Logic End--------')	
 	
 	 //let value;
 		//if (student === null || typeof student === 'undefined') 
