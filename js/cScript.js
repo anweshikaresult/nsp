@@ -166,7 +166,7 @@ function strToJson(encodedString,inputName,inputRollNum){
 		};
 	});
 			
-	//console.log (transformedArray);
+	console.log (transformedArray);
 	 
 	//const student = transformedArray.find(item => item.Name === resultName);
 	const student = transformedArray.find(item => item.RollNumber === resultRoll);
