@@ -177,7 +177,7 @@ function strToJson(encodedString,inputName,inputRollNum){
 	filter.RollNumber= resultRoll,
 	filter.Name=resultName
 	console.log(filter);
-	const arrCandidate= transformedArray.filter(function(item) {
+	const arrCandidate = transformedArray.filter(function(item) {
 	  for (var key in filter) {
 	    if (item[key] === undefined || item[key] != filter[key])
 	      return false;
@@ -252,4 +252,3 @@ function csvToJson(csv) {
 
     return jsonData;
 }
-
