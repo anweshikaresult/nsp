@@ -185,16 +185,22 @@ function strToJson(encodedString,inputName,inputRollNum){
 	  return true;
 	});
 	console.log(arrCandidate)
+	console.log(arrCandidate[0].Name)
+	console.log(arrCandidate[0].RollNumber)
+	console.log(arrCandidate[0].Marks)
 	console.log('--------New Fileter Logic End--------')
 	
 	
 	 //let value;
-		if (student === null || typeof student === 'undefined') {
+		//if (student === null || typeof student === 'undefined') 
+		if ( arrCandidate.length == 0 )
+		{
 			console.log('Value is null or undefined');
 			document.getElementById('resultDisplay').innerText = 'Please enter your name exactly as it appears on your admit card !'
 			document.getElementById('resultDisplay').style.backgroundColor = 'red';
 		}
-		else if ((student.RollNumber == resultRoll) && (student.Name == resultName))
+		//else if ((student.RollNumber == resultRoll) && (student.Name == resultName))
+		else if (arrCandidate.length > 0)
 		{		 
 			 console.log(student);
 			 console.log(student.RollNumber); 
