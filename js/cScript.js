@@ -194,7 +194,7 @@ function strToJson(encodedString,inputName,inputRollNum){
 		if ( arrCandidate.length == 0 )
 		{
 			console.log('Value is null or undefined');
-			document.getElementById('resultDisplay').innerText = 'Please enter your name exactly as it appears on your admit card !'
+			document.getElementById('resultDisplay').innerText = 'Please enter your name and roll number exactly as it appears on your admit card !'
 			document.getElementById('resultDisplay').style.backgroundColor = 'red';
 		}
 		//else if ((student.RollNumber == resultRoll) && (student.Name == resultName))
